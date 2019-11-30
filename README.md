@@ -8,7 +8,7 @@ Download the first release, extract it to somewhere in your PC.
 
 Go to the extracted folder and move esx_carmileage to your resources folder.
 
-Add <b>ensure esx_carmileage</b> to your server.cfg
+Add <b>start esx_carmileage</b> to your server.cfg
 
 Import veh_km.sql into your database.
 
