@@ -13,7 +13,7 @@ Import veh_km.sql into your database.
 
 Start your server and hop on your first car.
 
-This script requires:
+<b>This script requires:</b>
 
 ESX, can be obtained here: https://github.com/ESX-Org/es_extended
 
