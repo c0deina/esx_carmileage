@@ -16,4 +16,5 @@ Start your server and hop on your first car.
 This script requires:
 
 ESX, can be obtained here: https://github.com/ESX-Org/es_extended
+
 MySQL Async, can be obtained here: https://github.com/brouznouf/fivem-mysql-async
