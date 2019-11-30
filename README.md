@@ -9,7 +9,7 @@ Go to the extracted folder and move esx_carmileage to your resources folder.
 
 Add <b>ensure esx_carmileage</b> to your server.cfg
 
-Import veh_km into your database.
+Import veh_km.sql into your database.
 
 Start your server and hop on your first car.
 
