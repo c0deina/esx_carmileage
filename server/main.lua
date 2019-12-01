@@ -51,8 +51,14 @@ ESX.RegisterServerCallback('esx_carmileage:getMileage', function(source, cb, pla
 			if found then
 				cb(KMSend)
 			else
-				cb(0)
-				MySQL.Async.execute('INSERT INTO veh_km (carplate) VALUES (@carplate)',{['@carplate'] = plate})
+				MySQL.Async.fetchAll("SELECT plate FROM owned_vehicles WHERE plate=@plate",{['@plate'] = plate}, function(data) 
+					if #data > 0 then
+						cb(0)
+						MySQL.Async.execute('INSERT INTO veh_km (carplate) VALUES (@carplate)',{['@carplate'] = plate})
+					else
+						cb(math.random(100,500000))
+					end
+				end)				
 				Wait(2000)
 			end
 
