@@ -20,3 +20,14 @@ Start your server and hop on your first car.
 ESX, can be obtained here: https://github.com/ESX-Org/es_extended
 
 MySQL Async, can be obtained here: https://github.com/brouznouf/fivem-mysql-async
+
+BASEVENTS
+in vehiclechecker.lua
+
+find TriggerServerEvent('baseevents:enteringVehicle').....
+and after that paste (it should be there twice):
+				TriggerEvent('core:enteredVehicle', vehicle)
+
+find TriggerServerEvent('baseevents:leftVehicle')....
+and after that paste 
+				TriggerEvent('core:leftVehicle', currentVehicle)				
