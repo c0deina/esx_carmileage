@@ -118,7 +118,15 @@ AddEventHandler("core:leftVehicle", function(currentVehicle)
 	local vehicle   	= currentVehicle
 	saveKM = hasKM
 	--print(saveKM)
-	TriggerServerEvent('esx_carmileage:addMileage', vehPlate, saveKM)
+	ESX.TriggerServerCallback('eden_garage:stockv',function(valid)
+
+		if (valid) then
+			TriggerServerEvent('esx_carmileage:addMileage', vehPlate, saveKM)	
+		else
+			--print('This isn't your car')
+		end
+				
+	end,vehicleProps)	
 	inVeh = false
 	--ESX.ShowNotification('Vystupuješ..')
 end)
