@@ -100,8 +100,7 @@ displayHud = true
 						local veh = GetVehiclePedIsIn(PlayerPedId(),false)
 					local driver = GetPedInVehicleSeat(veh, -1)
 					if driver == PlayerPedId() and GetVehicleClass(veh) ~= 13 and GetVehicleClass(veh) ~= 14 and GetVehicleClass(veh) ~= 15 and GetVehicleClass(veh) ~= 16 and GetVehicleClass(veh) ~= 17 and GetVehicleClass(veh) ~= 21 then
-				DrawAdvancedText(0.270 - x, 0.97 - y, 0.005, 0.0028, 0.6, round(showKM, 2), 255, 255, 255, 255, 6, 1)
-				DrawAdvancedText(0.325 - x, 0.97 - y, 0.005, 0.0028, 0.6, "kms", 255, 255, 255, 255, 6, 1)
+				DrawAdvancedText(0.296 - x, 0.92 - y, 0.005, 0.0028, 0.6, round(showKM, 2).. ' km', 255, 255, 255, 255, 6, 1)
 				end
 			else
 				Citizen.Wait(750)
